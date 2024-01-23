@@ -500,7 +500,7 @@ namespace OBSWebsocketDotNet
                     break;
 
                 case nameof(InputVolumeMeters):
-                    InputVolumeMeters?.Invoke(this, new InputVolumeMetersEventArgs(JsonConvert.DeserializeObject<List<JObject>>((string)body["inputs"])));
+                    InputVolumeMeters?.Invoke(this, new InputVolumeMetersEventArgs(JsonConvert.DeserializeObject<List<JObject>>(body["inputs"].ToString())));
                     break;
 
                 case nameof(ReplayBufferSaved):

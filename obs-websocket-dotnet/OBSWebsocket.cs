@@ -8,6 +8,7 @@ using System.Collections.Concurrent;
 using System.Net.WebSockets;
 using Websocket.Client;
 using OBSWebsocketDotNet.Communication;
+using OBSWebsocketDotNet.Types;
 
 namespace OBSWebsocketDotNet
 {
@@ -287,7 +288,8 @@ namespace OBSWebsocketDotNet
         {
             var requestFields = new JObject
             {
-                { "rpcVersion", SUPPORTED_RPC_VERSION }
+                { "rpcVersion", SUPPORTED_RPC_VERSION },
+                { "eventSubscriptions", 67583} // All events + InputVolumeMeters
             };
 
             if (authInfo != null)
