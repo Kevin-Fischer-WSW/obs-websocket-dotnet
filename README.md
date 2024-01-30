@@ -8,8 +8,8 @@ See the `TestClient` project for a working example.
   
 # v5 Updates
 NOTE: As OBS Websocket v5.0 is not backward compatible with 4.9.x, neither is the .Net version.  
-**What's new in v5.0.0.2:**
-* Fixed stability of internal websocket
+**What's new in v5.0.0.3:**
+* Fixed issue with integer overflow for OutputStatus objects  
 (Older updates):
 * Each event now has a dedicated EventArgs class. This will break the previous event signature
 * Finished adding all v5 methods
@@ -22,4 +22,4 @@ Please report issues/bugs via the [Issues Tracker](https://github.com/BarRaider/
 **Discord:** Discuss in #developers-chat in [Bar Raiders](http://discord.barraider.com)
 
 ## EOL for v4.x branch
-NOTE: We will no longer be updating the v4.x branch as we move towards v5.0 (which is NOT backwards compatible). Any PRs should be done on the `v5-dev` branch.
+NOTE: We will no longer be updating the v4.x branch as we move towards v5.0 (which is NOT backwards compatible).
